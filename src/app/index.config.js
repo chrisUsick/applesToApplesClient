@@ -1,4 +1,4 @@
-export function config ($logProvider, toastrConfig) {
+export function config ($logProvider, toastrConfig, $sailsProvider) {
   'ngInject';
   // Enable log
   $logProvider.debugEnabled(true);
@@ -9,4 +9,7 @@ export function config ($logProvider, toastrConfig) {
   toastrConfig.positionClass = 'toast-top-right';
   toastrConfig.preventDuplicates = true;
   toastrConfig.progressBar = true;
+
+  $sailsProvider.url = 'http://localhost:1337';
+
 }

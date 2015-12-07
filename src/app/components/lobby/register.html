@@ -1,0 +1,10 @@
+<div>
+  {{c.name}}
+  <form ng-submit="c.submit()" class="inline">
+    <div class="form-group">
+      <input class="form-control" type="text" ng-model="c.name"/>
+      <label class="alert alert-danger" ng-show="c.uniqueError">This name is in use</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>

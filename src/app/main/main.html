@@ -5,10 +5,15 @@
   </div>
 
   <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-
+    <h1>Lobby</h1>
+    <lobby-register registered="c.registered(ticket)" ng-show="!c.myTicket.id"></lobby-register>
   </div>
 
-
+  <p ng-show="!c.myTicket.id">
+    Connecting
+  </p>
+  <pre>
+    {{c.myTicket}}
+  </pre>
 
 </div>

@@ -1,11 +1,16 @@
 export class MainController {
-  constructor ($timeout) {
+  constructor ($timeout, $sails, $log) {
     'ngInject';
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1449504363981;
+    this.connected = false;
+    this.$log = $log;
+    this.mainScope = true;
+  }
 
+
+  registered (ticket) {
+    this.$log.log('registered', ticket, this.mainScope);
+    this.myTicket = ticket;
   }
 
 }
