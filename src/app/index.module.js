@@ -9,6 +9,7 @@ import { MainController } from './main/main.controller';
 // directives
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { LobbyDirective } from '../app/components/lobby/lobby.directive';
+import {LobbyListDirective } from '../app/components/lobby/lobbyList.directive';
 
 // services
 import {LobbyService} from '../app/components/lobby/lobby.service';
@@ -21,4 +22,5 @@ angular.module('applesToApplesClient', ['ngSails', 'ngAnimate', 'ngCookies', 'ng
   .controller('MainController', MainController)
   .directive('acmeNavbar', NavbarDirective)
   .directive('lobbyRegister', LobbyDirective)
+  .directive('lobbyList', LobbyListDirective)
   .service('lobbyService', LobbyService);

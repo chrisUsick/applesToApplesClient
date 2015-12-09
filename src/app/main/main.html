@@ -7,6 +7,19 @@
   <div class="jumbotron text-center">
     <h1>Lobby</h1>
     <lobby-register registered="c.registered(ticket)" ng-show="!c.myTicket.id"></lobby-register>
+    <h2 ng-show="c.myTicket.id">Hello {{c.myTicket.name}}</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h3>People in the lobby</h3>
+      <!-- <ul>
+        <li ng-repeat="ticket in c.tickets">
+          {{ticket.id}}: {{ticket.name}}
+        </li>
+      </ul> -->
+      <lobby-list></lobby-list>
+    </div>
   </div>
 
   <p ng-show="!c.myTicket.id">
