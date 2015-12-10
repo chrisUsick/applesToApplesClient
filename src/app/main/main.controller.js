@@ -7,15 +7,6 @@ export class MainController {
     this.mainScope = true;
     this.lobbyService = lobbyService;
 
-    this.tickets = lobbyService.getTickets();
-
-    lobbyService.on('ticket', (msg) => {
-      this.$log.log('ticket msg', msg);
-      if (msg.verb == 'created') {
-        this.tickets.push(msg.data);
-      }
-    });
-
   }
 
 

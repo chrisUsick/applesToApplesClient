@@ -18,8 +18,7 @@ class LobbyListController {
     'ngInject';
     this.tickets = lobbyService.getTickets();
 
-    lobbyService.on('created', (ticket) => {
-      this.tickets.push(ticket);
-    });
+    
+
   }
 }
