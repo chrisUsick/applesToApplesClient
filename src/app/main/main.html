@@ -8,6 +8,9 @@
     <h1>Lobby</h1>
     <lobby-register registered="c.registered(ticket)" ng-show="!c.myTicket.id"></lobby-register>
     <h2 ng-show="c.myTicket.id">Hello {{c.myTicket.name}}</h2>
+    <p class="alert alert-success" ng-show="c.gameReady">
+
+    </p>
   </div>
 
   <div class="row">

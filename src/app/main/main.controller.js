@@ -7,8 +7,8 @@ export class MainController {
     this.mainScope = true;
     this.lobbyService = lobbyService;
 
-  }
 
+  }
 
   registered (ticket) {
     this.$log.log('registered', ticket, this.mainScope);

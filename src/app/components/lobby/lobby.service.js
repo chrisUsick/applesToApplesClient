@@ -1,10 +1,11 @@
 var tickets = [];
 export class LobbyService {
-  constructor($sails, $q, $rootScope) {
+  constructor($sails, $q, $rootScope, $timeout) {
     'ngInject';
     this.$sails = $sails;
     this.$q = $q;
     this.$rootScope = $rootScope;
+    this.$timeout = $timeout;
 
     this.on('created', (ticket) => {
       tickets.push(ticket);
@@ -36,6 +37,7 @@ export class LobbyService {
           throw data.data;
         }
       });
+
   }
 
   on (event, callback) {
